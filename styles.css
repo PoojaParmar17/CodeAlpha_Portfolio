@@ -1,0 +1,201 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0; /* Remove default body padding for full-width background */
+    background: linear-gradient(to bottom, #2980b9, #3498db); /* Gradient background */
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scroll on animations */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+header {
+    text-align: center;
+    padding: 60px 0; /* Increased padding */
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 50px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 15px;
+}
+
+section {
+    padding: 40px;
+    margin-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.2s ease-out;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    animation: slideInLeft 1.5s ease-out;
+}
+
+.skill {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project {
+    margin-bottom: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: slideInrightside 1.5s ease-out;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.project:hover {
+    transform: scale(1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease; /* Smooth transition for zoom */
+}
+.project:hover .project-image{
+    transform: scale(1);
+}
+
+.project-details {
+    padding: 30px;
+}
+
+.project h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.contact {
+    text-align: center;
+    padding: 40px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.social-media {
+    margin-top: 30px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 1.4rem;
+    color: #fff;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-media a:hover {
+    transform: translateY(-5px);
+    color: #ecf0f1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 1.6rem; }
+    .skills-container { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    .project-details { padding: 20px; }
+    .social-media a { font-size: 1.2rem; margin: 0 15px; }
+    section{padding: 20px;}
+}
+
+.project {
+    margin: 20px;
+    padding: 15px;
+    background-color: #E6F7FF; /* Light blue background */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.btn-view-project {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #FF6F61; /* Nude pink */
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-view-project:hover {
+    background-color: #E15C53; /* Slightly darker pink */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.project h3, .project p {
+    color: #333; /* Dark font for better contrast */
+}
+
+.resume-image {
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    width: 50%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project-content {
+    display: flex;            /* Use flexbox to arrange items horizontally */
+    align-items: center;      /* Vertically center the items */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.project-video {
+    margin-left: 20px;        /* Add some space between the button and the video */
+    width: 500px;             /* Increase the width of the video */
+    height: auto;             /* Maintain aspect ratio */
+}

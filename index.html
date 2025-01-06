@@ -1,0 +1,78 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Pooja Parmar</h1>
+        <h2>Web Designing</h2>
+    </header>
+
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">photoshop</div>
+	    <div class="skill">c++</div>
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Expense Tracker</h3>
+            <p>An Expense Tracker is a tool or app that helps individuals or businesses track their spending. It records and categorizes expenses, allowing users to monitor where their money goes. This helps with budgeting, financial planning, and identifying areas where they can save. The goal is to keep better control over personal or business finances.</p>
+            <div class="project-content">
+                <button class="btn-view-project" onclick="openProject()">View Project</button>
+                <video controls class="project-video">
+                    <source src="Project 1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="project">
+            <h3>Social Media Dashboard</h3>
+            <p>A Social Media Dashboard is a tool that allows users to monitor, analyze, and manage multiple social media accounts in one place. It provides real-time data on metrics like follower growth, engagement, posts, and audience insights. This dashboard helps businesses, marketers, and individuals track their social media performance, optimize strategies, and save time by managing everything from a single interface.</p>
+            <button class="btn-view-project" onclick="openSocialMediaDashboard()">View Project</button>
+            <video controls class="project-video">
+                <source src="Project 2.mp4" type="video/mp4">
+            </video>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Resume</h2>
+        <embed src="Resume.jpg" class="resume-image "></embed>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email Address:parmarpooja26612@gmail.com</p>
+        <p>Phone Number:9327756336</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/pooja-parmar-04794530a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/PoojaParmar17" target="_blank"><i class="fab fa-github"></i></a> 
+            </div>
+    </section>
+
+    <script>
+        // Add JavaScript for interactivity here (e.g., animations, hover effects)
+        function openProject() {
+        window.open("https://poojaparmar17.github.io/CodeAlpha_Expense_Tracker/", "_blank");
+    }
+
+    function openSocialMediaDashboard() {
+        window.open("https://poojaparmar17.github.io/CodeAlpha_SocialMedia_Dashboard/", "_blank");
+    }
+    </script>
+
+</body>
+</html>
